@@ -1,4 +1,6 @@
-# components
+# TODO
+
+## components
 * inputs
   * text
   * number
@@ -8,16 +10,18 @@
 * RiskTypeForm
   * Field
 
-# state
+# DONE
+
+## state
 * RiskTypes: []
 * CurrentRiskType
 
-# mutations
+## mutations
 * RECEIVE_RISK_TYPES
 * SET_CURRENT_RISK_TYPE
 * REQUEST_RISK_TYPES
 * REQUEST_RISK_TYPE_DETAILS
 
-# actions
+## actions
 * FETCH_RISK_TYPES
 * FETCH_RISK_TYPE_DETAILS

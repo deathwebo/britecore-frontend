@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import store from './store'
+import HelloWorld from './components/HelloWorld';
+import store from './store';
 
 export default {
   name: 'App',
@@ -22,6 +22,9 @@ export default {
     count() {
       return this.$store.state.count;
     },
+  },
+  created: function() {
+    this.$store.dispatch('fetchRiskTypes');
   },
   methods: {
     increment() {
@@ -36,14 +39,3 @@ export default {
   },
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
