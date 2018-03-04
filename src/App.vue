@@ -1,12 +1,20 @@
 <template>
   <div id="app" class="container">
     <h1 class="title">Insurance Risk Creator</h1>
-    <RiskTypeSelector />
+    <div class="columns">
+      <div class="column">
+        <RiskTypeSelector />
+      </div>
+      <div class="column">
+        <RiskForm />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import RiskTypeSelector from './components/RiskTypeSelector';
+import RiskForm from './components/RiskForm/RiskForm';
 
 export default {
   name: 'App',
@@ -28,6 +36,7 @@ export default {
   },
   components: {
     RiskTypeSelector,
+    RiskForm,
   },
 }
 </script>

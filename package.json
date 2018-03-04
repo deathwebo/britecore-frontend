@@ -12,6 +12,7 @@
   "dependencies": {
     "bulma": "^0.6.2",
     "vue": "^2.5.2",
+    "vuejs-datepicker": "^0.9.27",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
