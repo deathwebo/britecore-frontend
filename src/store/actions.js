@@ -5,18 +5,19 @@ export default {
     commit('requestRiskTypes');
     fetch(`${baseUrl}/risk_types`)
       .then(response => response.json())
-      .then(({ riskTypes }) => commit('receiveRiskTypes', {
-        riskTypes,
-      }))
+      .then(data => {
+        commit('receiveRiskTypes', {
+          riskTypes: data.risk_types,
+        });
+      })
       .catch(error => console.log(error));
   },
-
-  fetchRiskTypeDetails (context, { id }) {
+  fetchRiskTypeDetails ({ commit }, { id }) {
     commit('requestRiskTypeDetails');
     fetch(`${baseUrl}/risk_types/${id}`)
       .then(response => response.json())
-      .then(({ riskType }) => commit('setCurrentRiskType', {
-        riskType,
+      .then(data => commit('setCurrentRiskType', {
+        riskType: data.risk_type,
       }))
       .catch(error => console.log(error));
   },

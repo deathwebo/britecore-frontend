@@ -1,23 +1,15 @@
 <template>
-  <div id="app">
-    <HelloWorld/>
-    <div>
-      <p>{{ count }}</p>
-      <p>
-        <button @click="increment">+</button>
-        <button @click="decrement">-</button>
-      </p>
-    </div>
+  <div id="app" class="container">
+    <h1 class="title">Insurance Risk Creator</h1>
+    <RiskTypeSelector />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-import store from './store';
+import RiskTypeSelector from './components/RiskTypeSelector';
 
 export default {
   name: 'App',
-  store,
   computed: {
     count() {
       return this.$store.state.count;
@@ -35,7 +27,7 @@ export default {
     },
   },
   components: {
-    HelloWorld
+    RiskTypeSelector,
   },
 }
 </script>
